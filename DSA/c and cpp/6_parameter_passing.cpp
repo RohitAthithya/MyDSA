@@ -35,6 +35,8 @@ void swap2(int *p1, int *p2)
 // 1. Function utilising pass by reference are generally not encouraged due to the above given reason, as the function
 // 2. The compiler MAY convert to this function into a inline function OR
 // the compiler MAY choose to convert the referencing into pointer operation internally!
+
+// NOTE: INLINE is just a suggestion to the compiler rather than a strict implementation.
 void swap3(int &a, int &b)
 {
     int temp;
