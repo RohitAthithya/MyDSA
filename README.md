@@ -11,7 +11,7 @@ Other possible  uses include:
 +=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
 Hey all, This is a repo I have set up to push all my code.
 One main reason to combine multiple projects under one repo is to
-    - learn consistency (by filling up my Contribution chart),
+    - learn consistency,
     - learn to manage code from various sources.
     - learn to use and reuse code.
     - contribute to open source.
