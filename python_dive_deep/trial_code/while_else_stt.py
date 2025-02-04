@@ -1,7 +1,15 @@
+# region: while loop with an else statement
 
-#region: while loop with an else statement
-lst = [1,2,3]
-val = 4
+""" How useful is the else block for a while statement
+
+The else block runs only if the while loop completes without a break.
+It helps in scenarios where you need to detect whether a condition was never met inside the loop.
+It makes logic clearer compared to using flags or additional variables.
+
+"""
+
+lst = [1, 2, 3]
+val = 2
 idx = 0
 while idx < len(lst):
     if lst[idx] == val:
@@ -12,9 +20,7 @@ else:
     lst.append(val)
 
 print(*lst)
-#endregion:
-
-
+# endregion:
 
 
 # from re import findall as re_findall
@@ -36,5 +42,3 @@ print(*lst)
 #         print (_output.split(","))
 # except:
 #     print (False, "Unkown error")
-
-
