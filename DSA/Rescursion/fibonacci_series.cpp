@@ -4,21 +4,26 @@
 using namespace std;
 
 long long int fibonacci_series(int n);
-long long int fibonacci_series_memoized(int n, int *);
+long long int fibonacci_series_memoized(int n, long long int *);
+long long int fibonacci_series_memoized_style_2(int n, long long int *);
 long long int fibonacci_series_iterative(int);
 
 int main()
 {
     int n;
     cout << "Enter 'n' upto which value of fibonacci series needs to found: " << endl;
-    // cin >> n;/
-    n = 15;
+    cin >> n;
+    // n = 5;
     cout << "The value of fibonacci series upto '" << n << "' terms is: " << fibonacci_series(n) << endl;
 
     // memoized implementation:
-    int *results = new int[n + 1];
+    long long int *results = new long long int[n + 1];
     std::fill(results, results + n + 1, (int)-1);
     cout << "The value of MEMOIZED fibonacci series upto '" << n << "' terms is: " << fibonacci_series_memoized(n, results) << endl;
+
+    std::fill(results, results + n + 1, (int)-1);
+    cout << "The value of MEMOIZED fibonacci series style 2 upto '" << n << "' terms is: " << fibonacci_series_memoized_style_2(n, results) << endl;
+    delete results;
 
     cout << "The value of ITERATIVE fibonacci series upto '" << n << "' terms is: " << fibonacci_series_iterative(n) << endl;
 
@@ -71,7 +76,7 @@ long long int fibonacci_series(int n)
  *
  *
  */
-long long int fibonacci_series_memoized(int n, int *results)
+long long int fibonacci_series_memoized(int n, long long int *results)
 {
     // static long long int results[1000] = {-1}; //cannot initialise an array with all -1s like this in c++
 
@@ -89,6 +94,28 @@ long long int fibonacci_series_memoized(int n, int *results)
         fibonacci = fibonacci_series_memoized(n - 2, results) + fibonacci_series_memoized(n - 1, results);
         results[n] = fibonacci;
         return fibonacci;
+    }
+}
+
+long long int fibonacci_series_memoized_style_2(int n, long long int *results)
+{
+    if (n <= 1)
+    {
+        results[n] = (long long int)n;
+        return n;
+    }
+    else
+    {
+        if (results[n - 2] < 0)
+        {
+            results[n - 2] = fibonacci_series_memoized_style_2(n - 2, results);
+        }
+        if (results[n - 1] < 0)
+        {
+            results[n - 1] = fibonacci_series_memoized_style_2(n - 1, results);
+        }
+        results[n] = results[n - 2] + results[n - 1];
+        return results[n];
     }
 }
 
