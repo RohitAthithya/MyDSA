@@ -97,9 +97,6 @@ long long int fibonacci_series_memoized(int n, long long int *results)
     }
 }
 
-/**
- * In this style of fibonacci series, the instructor provided a clean code for better understanding
- */
 long long int fibonacci_series_memoized_style_2(int n, long long int *results)
 {
     if (n <= 1)
