@@ -97,28 +97,6 @@ long long int fibonacci_series_memoized(int n, long long int *results)
     }
 }
 
-long long int fibonacci_series_memoized_style_2(int n, long long int *results)
-{
-    if (n <= 1)
-    {
-        results[n] = (long long int)n;
-        return n;
-    }
-    else
-    {
-        if (results[n - 2] < 0)
-        {
-            results[n - 2] = fibonacci_series_memoized_style_2(n - 2, results);
-        }
-        if (results[n - 1] < 0)
-        {
-            results[n - 1] = fibonacci_series_memoized_style_2(n - 1, results);
-        }
-        results[n] = results[n - 2] + results[n - 1];
-        return results[n];
-    }
-}
-
 /**
  * In this style of fibonacci series, the instructor provided a clean code for better understanding
  * The time and space complexity is same as the other style of recursion
