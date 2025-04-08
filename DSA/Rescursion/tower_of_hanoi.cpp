@@ -42,13 +42,20 @@ int main()
  * Tower of Hanoi :
  * Print the steps to solve tower of hanoi game for n discs
  *
- * Time complexity:
+ * Time complexity: O(2^n)
  * ----------------
+ * The implementation recursively takes 2^n - 1 times
+ * for 3 => 7 steps
+ * for 4 => 15 steps
+ * for 5 => 31 steps
+ * ...
+ * for n => 2^n - 1 steps
  *
  *
- * Space complexity:
+ * Space complexity: O(n)
  * -----------------
- *
+ *  No additional variable is required as n increases,
+ *  it constantly O(n) as the dept of the stack frame will be n
  */
 void tower_of_hanoi(int noOfDiscs, char startTwr, char auxTwr, char finalTwr)
 {
