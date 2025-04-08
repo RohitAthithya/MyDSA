@@ -2,4 +2,17 @@
     - it was using default credentials stored in the local credentials manager of windows
     - i changed it: by reading "https://stackoverflow.com/a/68903010/14827069"
 
-2.
+2. When executing cpp files with other file inclusions, the configurations in settings.json, is unable to read on the
+imported files and thus the command executed on clicking the run button does not give the proper execution command.
+    - after every execution i manually added the files name to the command line.
+
+3. Command that is run while clicking the 'Run' button by Code-runner extension can be configured in the settings.json file
+
+4. Unable to update the vscode as it is run as administrator
+    - use the winget application to update the same:
+    - some useful winget commands are:
+        - winget search
+            - winget search vscode : will list the applications with the vscode in it and also the id.
+            - the id is used in the upgrade command.
+        - winget upgrade --id.Microsoft.VisualStudioCode
+
