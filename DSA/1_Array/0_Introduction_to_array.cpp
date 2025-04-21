@@ -55,7 +55,7 @@ int main()
 /**
  * printArray:
  * \brief  print array content upto given size,
- * \param  arr an array's address
+ * \param  arr statically allocated array's address
  *          size integeral size of the array / number of intended elements the array stores'
  * \return
  */
