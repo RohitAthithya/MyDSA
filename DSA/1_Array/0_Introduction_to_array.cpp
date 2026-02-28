@@ -14,7 +14,7 @@
  * A collection of variables.
  *
  * Array can be visualized as a [vector] collection of variables/scalars
- * arranged in a linear fashion or contiuous memory location
+ * arranged in a linear fashion or continuous memory location
  *
  */
 
@@ -55,8 +55,8 @@ int main()
 /**
  * printArray:
  * \brief  print array content upto given size,
- * \param  arr statically allocated array's address
- *          size integeral size of the array / number of intended elements the array stores'
+ * \param  arr: statically allocated array's address
+ *         size: integeral size of the array / number of intended elements the array stores'
  * \return
  */
 void printArray(int arr[], int size)
